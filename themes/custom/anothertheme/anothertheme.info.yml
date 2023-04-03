@@ -1,0 +1,14 @@
+name: AnotherTheme
+type: theme
+description: 'My Awesome theme'
+base theme: stable
+package: PackageName
+core: 8.x
+libraries:
+  - anothertheme/global-styling
+ 
+base theme: false
+
+regions:
+  header: header
+  content: content

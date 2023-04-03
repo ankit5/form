@@ -1,0 +1,268 @@
+<link rel="stylesheet" media="all" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<style>
+.container{
+	background-color: blanchedalmond;
+}
+.field--type-datetime h4 {
+	font-weight: 400;
+    font-size: unset;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.form-required:after {
+    width: 7px;
+    height: 7px;
+    background-size: 7px 7px;
+}
+.form-required:after {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 0.3em;
+    content: "";
+    vertical-align: super;
+    background-image: url(/core/misc/icons/ee0000/required.svg);
+    background-repeat: no-repeat;
+    background-size: 6px 6px;
+} 
+.form-checkboxes .js-form-type-checkbox {
+	float: left;
+    width: 50%;
+}
+legend {
+	font-size: unset;
+    margin: 0;
+}
+.description {
+	font-size: 11px;
+}
+.field--name-field-examination .tabledrag-toggle-weight-wrapper {
+	display: none;
+}
+.field-multiple-table thead {
+	display: none;
+}
+#block-anothertheme-page-title {
+	display:none;
+}
+.field-add-more-submit {
+	width: 19%;
+    margin: 0 auto;
+    background-color: #007bff;
+    color: white;
+}
+.paragraph-type-top {
+    display: none !important;
+    }
+.paragraphs-subform {
+	display: inline-flex;
+}
+.paragraphs-subform .form-wrapper  {
+	margin-right: 14px;
+    width: 23%;
+}
+.paragraphs-subform .form-wrapper label {
+    font-size: 15px;
+    }
+.paragraphs-subform .field--name-field-marks-obtained {
+    width: 14%;
+    }
+.paragraphs-subform .field--name-field-year {
+    width: 8%;
+    }
+.paragraphs-subform .field--name-field-examination-passed {
+    width: 16%;
+    }
+</style>
+
+
+{{ form.form_build_id }}
+{{ form.form_token }}
+{{ form.form_id }}
+
+
+
+<div class="container">
+	<header class="header">
+	<h1 id="title" class="text-center">APPLICATION FORM FOR ADMISSION</h1>
+		<h3 id="title" class="text-center">MASTER OF FINE ART (2 Years course)</h3>
+		<p id="description" class="text-center">
+			
+		</p>
+	</header>
+	<div class="form-wrap">	
+		
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						{{ form.title }}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						{{ form.field_a_specialisation }}
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						{{ form.field_a_date_of_birth }}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_a_date_of_birth }}
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						{{ form.field_a_nationality }}
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_a_religion }}
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_a_gender }}
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						{{ form.field_father_s_name }}
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_mother_s_name }}
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_guardian_s_name }}
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						{{ form.field_a_local_address }}
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_a_phone_no }}
+					</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="form-group">
+						{{ form.field_a_permanent_address }}
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_a_phone_no }}
+					</div>
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						{{ form.field_a_parent_s_occupation }}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_a_total_annual_income }}
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						{{ form.field_a_category }}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_a_please_mark }}
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						{{ form.field_college_last_attended }}
+					</div>
+				</div>
+				<div class="col-md-4">
+					
+						<div class="form-group">
+						{{ form.field_a_date_of_leaving }}
+					
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_a_university_enrolment_no }}
+					</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				
+                     {{ form.field_examination }}
+				
+			</div>
+
+
+			
+			<div class="container">
+			<div class="row">
+				<div class="col-md-2 offset-md-5">
+				<div class="form-group">
+				{{ form.actions }}
+					</div>
+				</div>
+			</div>
+			</div>
+
+		
+	</div>	
+</div>

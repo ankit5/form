@@ -1,0 +1,7 @@
+user_module.admin_reg_accept:
+  path: '/admission-form-bfa'
+  defaults:
+    _controller: 'Drupal\user_module\Controller\AddmissionController::index'
+    _title: 'APPLICATION FORM BFA'
+  requirements:
+    _permission: 'admin custom module'
