@@ -1,4 +1,4 @@
-
+<meta name="viewport" content="width=1424"> 
 <link rel="stylesheet" media="all" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <style>
 .container{
@@ -91,7 +91,39 @@ legend {
  display:none;
  }
 
+ input[name="field_a_photo_0_remove_button"]:hover,input[name="field_a_photo_0_remove_button"]:not(:disabled):not(.disabled):active {
+color: #b90a0a;
+background-color: #b90a0a;
+ }
  
+input[name="field_a_photo_0_remove_button"] {
+
+    margin: 0;
+    border: 0;
+    padding: 0;
+    border-radius: 50%;
+    width: 20px;
+    height: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    transition: all 150ms;
+    position: absolute;
+    top: 23px;
+    left: 76px;
+    color: #b90a0a;
+ }
+.form-item-field-a-photo-0 .form-managed-file:after{
+  content: "x";
+    pointer-events: none;
+    position: absolute;
+    left: 82px;
+    top: 21px;
+    z-index: 100;
+    color: white;
+}
+
 
 
 </style>
