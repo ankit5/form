@@ -1,17 +1,8 @@
 (function($, Drupal, drupalSettings) {
 
-  "use strict";  
-//$('input[name="field_a_photo_0_remove_button"]').val('X');
- $(document).ready(function() {
-        $("#edit-field-a-photo-0-upload").click(function() {
-          var fd = new FormData();
-          var files = $('#edit-field-a-photo-0-upload')[0].files[0];
-          if (files) {
-            alert("No files");
-            return;
-          }
-          });
-        });
+ $('input[type="file"]').each(function(idx, item) {
+   $(item).attr('accept', 'image/*;capture=camera');
+});
 //console.log("asd");
  /**
    * Add new custom command.

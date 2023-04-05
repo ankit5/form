@@ -62,7 +62,7 @@ function user_module_preprocess(&$variables, $hook) {
      if($variables['element']['#type'] == 'submit'){
      $variables['attributes']['class'][] = Html::cleanCssIdentifier('btn-primary');
      }
-    if($variables['element']['#type'] != 'checkbox' && $variables['element']['#type'] != 'file'){
+    if($variables['element']['#type'] != 'checkbox'){
      $variables['attributes']['class'][] = Html::cleanCssIdentifier('form-control');
      }
     
