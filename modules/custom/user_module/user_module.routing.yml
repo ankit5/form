@@ -5,3 +5,11 @@ user_module.admin_reg_accept:
     _title: 'APPLICATION FORM BFA'
   requirements:
     _permission: 'admin custom module'
+
+user_module.thanks:
+  path: '/thank-you'
+  defaults:
+    _controller: 'Drupal\user_module\Controller\AddmissionController::thanks'
+    _title: 'Thank you submit the form'
+  requirements:
+    _permission: 'admin custom module'

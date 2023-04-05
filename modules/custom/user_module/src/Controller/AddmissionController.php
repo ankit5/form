@@ -32,6 +32,13 @@ return $form;
       '#variable3' => $myArray,
     ];
 	}
-
+public function thanks() {
+$myNumber = 1;
+ return [
+      // Your theme hook name.
+      '#theme' => 'thank_you',
+      '#variable2' => $myNumber,
+    ];
+}
 
 }

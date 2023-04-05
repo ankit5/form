@@ -1,0 +1,12 @@
+# These will be loaded on every pages.
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      css/style.css: {}
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/jquery.once
