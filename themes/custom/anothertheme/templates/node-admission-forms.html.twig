@@ -123,8 +123,12 @@ input[name="field_a_photo_0_remove_button"] {
     z-index: 100;
     color: white;
 }
-
-
+.form-item-field-a-photo-0 .description {
+	display:none;
+}
+.des {
+	font-size: 11px;
+}
 
 </style>
 
@@ -168,6 +172,7 @@ input[name="field_a_photo_0_remove_button"] {
 					<div class="form-group">
 						<div class="form-group">
 						{{ form.field_a_photo }}
+						<div class="des">Applicant’s passport size photograph to be affixed with selfattested</div>
 					</div>
 					</div>
 				</div>
