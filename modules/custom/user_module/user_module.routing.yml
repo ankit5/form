@@ -12,4 +12,4 @@ user_module.thanks:
     _controller: 'Drupal\user_module\Controller\AddmissionController::thanks'
     _title: 'Thank you submit the form'
   requirements:
-    _permission: 'admin custom module'
+    _permission: 'access content'
