@@ -1,0 +1,9 @@
+name: 'admission Custom'
+type: module
+description: 'admission module'
+package: Custom
+core_version_requirement: '^8 || ^9'
+core: 8.x
+dependencies:
+  - toolbar
+  - menu_ui

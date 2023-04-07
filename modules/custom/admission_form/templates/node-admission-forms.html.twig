@@ -1,0 +1,202 @@
+<meta name="viewport" content="width=1424"> 
+
+<style>
+
+</style>
+
+
+{{ form.form_build_id }}
+{{ form.form_token }}
+{{ form.form_id }}
+
+
+
+<div class="container">
+	<header class="header">
+	<img src="http://colart.delhigovt.nic.in/sites/default/files/CoArt%20Logo%2001.png" style="
+    width: 34%;
+">
+	<h1 id="title" class="text-center">APPLICATION FORM FOR ADMISSION</h1>
+		<div id="title" class="text-center">{{ form.field_a_course_type }}</div>
+		<p id="description" class="text-center">
+			
+		</p>
+	</header>
+	<div class="form-wrap">	
+		
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						{{ form.title }}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						{{ form.field_a_specialisation }}
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						{{ form.field_a_date_of_birth }}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_a_photo }}
+						<div class="des">Applicant’s passport size photograph to be affixed with selfattested</div>
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						{{ form.field_a_nationality }}
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_a_religion }}
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_a_gender }}
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						{{ form.field_father_s_name }}
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_mother_s_name }}
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_guardian_s_name }}
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						{{ form.field_a_local_address }}
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_a_phone_no }}
+					</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="form-group">
+						{{ form.field_a_permanent_address }}
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_a_phone_no }}
+					</div>
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						{{ form.field_a_parent_s_occupation }}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_a_total_annual_income }}
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						{{ form.field_a_category }}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_a_please_mark }}
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						{{ form.field_college_last_attended }}
+						{{ form.field_school_last_attended }}
+					</div>
+				</div>
+				<div class="col-md-4">
+					
+						<div class="form-group">
+						{{ form.field_a_date_of_leaving }}
+					
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<div class="form-group">
+						{{ form.field_a_university_enrolment_no }}
+					</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				
+                     {{ form.field_examination }}
+				
+			</div>
+
+
+			
+			<div class="container">
+			<div class="row">
+				<div class="col-md-2 offset-md-5">
+				<div class="form-group">
+				{{ form.actions }}
+					</div>
+				</div>
+			</div>
+			</div>
+
+		
+	</div>	
+</div>

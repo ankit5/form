@@ -1,0 +1,144 @@
+.container{
+	background-color: blanchedalmond;
+}
+.field--type-datetime h4 {
+	font-weight: 400;
+    font-size: unset;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.form-required:after {
+    width: 7px;
+    height: 7px;
+    background-size: 7px 7px;
+}
+.form-required:after {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 0.3em;
+    content: "";
+    vertical-align: super;
+    background-image: url(/core/misc/icons/ee0000/required.svg);
+    background-repeat: no-repeat;
+    background-size: 6px 6px;
+} 
+.form-checkboxes .js-form-type-checkbox {
+	float: left;
+    width: 50%;
+}
+legend {
+	font-size: unset;
+    margin: 0;
+}
+.description {
+	font-size: 11px;
+}
+.field--name-field-examination .tabledrag-toggle-weight-wrapper {
+	display: none;
+}
+.field-multiple-table thead {
+	display: none;
+}
+#block-anothertheme-page-title {
+	display:none;
+}
+.field-add-more-submit {
+	width: 19%;
+    margin: 0 auto;
+    background-color: #007bff;
+    color: white;
+}
+.paragraph-type-top {
+    display: none !important;
+    }
+.paragraphs-subform {
+	display: inline-flex;
+}
+.paragraphs-subform .form-wrapper  {
+	margin-right: 14px;
+    width: 23%;
+}
+.paragraphs-subform .form-wrapper label {
+    font-size: 15px;
+    }
+.paragraphs-subform .field--name-field-marks-obtained {
+    width: 14%;
+    }
+.paragraphs-subform .field--name-field-year {
+    width: 8%;
+    }
+.paragraphs-subform .field--name-field-examination-passed {
+    width: 16%;
+    }
+    .button {
+     background-color: #b90a0a;
+    border-color: #781515;
+    }
+    .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle, .btn-primary:hover {
+    color: #fff;
+    background-color: #d71919;
+    border-color: #781515;
+}
+ .field-add-more-submit {
+ float: left;
+   
+ }
+ span.file a, .file-size {
+ display:none;
+ }
+
+ input[name="field_a_photo_0_remove_button"]:hover,input[name="field_a_photo_0_remove_button"]:not(:disabled):not(.disabled):active {
+color: #b90a0a;
+background-color: #b90a0a;
+ }
+ 
+input[name="field_a_photo_0_remove_button"] {
+
+    margin: 0;
+    border: 0;
+    padding: 0;
+    border-radius: 50%;
+    width: 20px;
+    height: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    transition: all 150ms;
+    position: absolute;
+    top: 23px;
+    left: 76px;
+    color: #b90a0a;
+ }
+.form-item-field-a-photo-0 .form-managed-file:after{
+  content: "x";
+    pointer-events: none;
+    position: absolute;
+    left: 82px;
+    top: 21px;
+    z-index: 100;
+    color: white;
+}
+.form-item-field-a-photo-0 .description {
+	display:none;
+}
+.des {
+	font-size: 11px;
+}
+#edit-field-a-course-type {
+	font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+}
+.h1, h1 {
+    font-size: 2rem;
+}
+
+.form-control:focus {
+    color: #0d0e0e;
+    background-color: #fff;
+    border-color: #bd2130;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #bd21306b;
+}

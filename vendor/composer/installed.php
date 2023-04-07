@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'drupal/legacy-project',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'a463e39bbdd979d6a00d20166003356077988976',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -237,6 +237,17 @@
             'replaced' => array(
                 0 => '8.9.19',
             ),
+        ),
+        'drupal/conditional_fields' => array(
+            'pretty_version' => 'dev-4.x',
+            'version' => 'dev-4.x',
+            'reference' => 'a8ffc7a7d4a99fec336b74fb362cfb90cca2bf2d',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/conditional_fields',
+            'aliases' => array(
+                0 => '4.x-dev',
+            ),
+            'dev_requirement' => false,
         ),
         'drupal/config' => array(
             'dev_requirement' => false,
@@ -659,9 +670,9 @@
             ),
         ),
         'drupal/legacy-project' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'a463e39bbdd979d6a00d20166003356077988976',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

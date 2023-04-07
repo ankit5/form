@@ -1,0 +1,15 @@
+admission_form.admin_reg_accept:
+  path: '/admission-form-bfa'
+  defaults:
+    _controller: 'Drupal\admission_form\Controller\AddmissionController::index'
+    _title: 'APPLICATION FORM BFA'
+  requirements:
+    _permission: 'admin custom module'
+
+admission_form.thanks:
+  path: '/thank-you'
+  defaults:
+    _controller: 'Drupal\admission_form\Controller\AddmissionController::thanks'
+    _title: 'Thank you submit the form'
+  requirements:
+    _permission: 'access content'
