@@ -84,7 +84,7 @@ legend {
  float: left;
    
  }
- span.file a, .file-size {
+.file-size {
  display:none;
  }
 
@@ -92,10 +92,14 @@ legend {
 color: #b90a0a;
 background-color: #b90a0a;
  }
- 
-input[name="field_a_photo_0_remove_button"] {
 
-    margin: 0;
+ .form-managed-file {
+        display: flex;
+ }
+ 
+input[value="Remove"] {
+
+   margin-left: 8px;
     border: 0;
     padding: 0;
     border-radius: 50%;
@@ -106,19 +110,16 @@ input[name="field_a_photo_0_remove_button"] {
     justify-content: center;
     align-items: center;
     transition: all 150ms;
-    position: absolute;
-    top: 23px;
-    left: 76px;
     color: #b90a0a;
  }
-.form-item-field-a-photo-0 .form-managed-file:after{
-  content: "x";
+.form-managed-file:after{
+     content: "x";
     pointer-events: none;
-    position: absolute;
-    left: 82px;
-    top: 21px;
-    z-index: 100;
+    position: relative;
+    right: 22px;
+    top: -1px;
     color: white;
+    left: -14px;
 }
 .form-item-field-a-photo-0 .description {
 	display:none;
@@ -141,4 +142,11 @@ input[name="field_a_photo_0_remove_button"] {
     border-color: #bd2130;
     outline: 0;
     box-shadow: 0 0 0 0.2rem #bd21306b;
+}
+.messages--error {
+        font-size: 11px;
+}
+div[data-drupal-messages]
+{
+font-size: 11px;
 }
