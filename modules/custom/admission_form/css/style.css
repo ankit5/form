@@ -60,7 +60,7 @@ legend {
     width: 23%;
 }
 .paragraphs-subform .form-wrapper label {
-    font-size: 15px;
+    font-size: 12px;
     }
 .paragraphs-subform .field--name-field-marks-obtained {
     width: 14%;
@@ -88,9 +88,9 @@ legend {
  display:none;
  }
 
- input[name="field_a_photo_0_remove_button"]:hover,input[name="field_a_photo_0_remove_button"]:not(:disabled):not(.disabled):active {
-color: #b90a0a;
-background-color: #b90a0a;
+ input[value="Remove"]:hover,input[value="Remove"]:not(:disabled):not(.disabled):active {
+color: #df2828;
+    background-color: #df2828;
  }
 
  .form-managed-file {
@@ -139,9 +139,9 @@ input[value="Remove"] {
 .form-control:focus {
     color: #0d0e0e;
     background-color: #fff;
-    border-color: #bd2130;
+    border-color: #a7a7a7;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem #bd21306b;
+    box-shadow: 0 0 0 0.1rem #a7a7a7;
 }
 .messages--error {
         font-size: 11px;
@@ -149,4 +149,37 @@ input[value="Remove"] {
 div[data-drupal-messages]
 {
 font-size: 11px;
+}
+
+.profile-pic {
+    width: 200px;
+    max-height: 200px;
+    display: inline-block;
+}
+
+.file-upload {
+    display: none;
+}
+.circle {
+    border-radius: 100% !important;
+    overflow: hidden;
+    width: 128px;
+    height: 128px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 72px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.p-image {
+  position: absolute;
+  top: 167px;
+  right: 30px;
+  color: #666666;
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.p-image:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
 }

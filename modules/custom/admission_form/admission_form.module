@@ -65,7 +65,7 @@ function admission_form_preprocess(&$variables, $hook) {
      if($variables['element']['#type'] == 'submit'){
      $variables['attributes']['class'][] = Html::cleanCssIdentifier('btn-primary');
      }
-    if($variables['element']['#type'] != 'checkbox'){
+    if($variables['element']['#type'] != 'checkbox' and $variables['element']['#type'] != 'radio'){
      $variables['attributes']['class'][] = Html::cleanCssIdentifier('form-control');
      }
     
