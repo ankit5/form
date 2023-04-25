@@ -3,6 +3,7 @@ use Drupal\Component\Utility\Html;
 use Drupal\Core\Url;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\file\FileInterface;
 
 
 
@@ -19,10 +20,45 @@ function admission_form_form_node_admission_form_alter(&$form, FormStateInterfac
    $form['#validate'][] = '_form_validation_admission';
   $form['actions']['submit']['#submit'][] = '_form_submit_admission';
   $form['title']['widget'][0]['value']['#description'] = t('(in block letters as in Senior School Certificate)');
-  $form['actions']['submit']['#value'] = t('Submit');
+  $form['actions']['submit']['#value'] = t('Save');
   $form['#attached']['library'][] = 'admission_form/global-styling';
    $form['#attached']['library'][] = 'admission_form/user_module_external';
-    
+   $form['field_category_certificate']['widget'][0]['#upload_validators']['_validate_file'] = [];
+   $form['field_annual_income_certificate']['widget'][0]['#upload_validators']['_validate_file'] = [];
+   $form['field_date_of_birth_certificate']['widget'][0]['#upload_validators']['_validate_file'] = [];
+   
+}
+
+function _validate_file(FileInterface $file) {
+  $errors = [];
+  $size = $file->getSize();
+  if($size < 1000000){
+ $errors[] = t($size."Minimum file size 1 MB is required.");
+}
+ 
+  return $errors;
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function admission_form_field_widget_form_alter(&$element, FormStateInterface &$form_state, $context) {
+  if (isset($element['#field_name']) && ($element['#field_name'] == 'field_category_certificate' || $element['#field_name'] == 'field_annual_income_certificate' || $element['#field_name'] == 'field_date_of_birth_certificate'))
+
+   {
+      // Add process callback to change field description.
+      $element['#process'][] = '_change_description';
+    }
+  }
+
+
+/**
+ *  The description field is build in a #process callback so we need to add another callback.
+ */
+function _change_description($element, FormStateInterface $form_state, $form) {
+  $element['#description'] = t('File size 1 MB to 5 MB limit.<br>
+Allowed types: pdf.');
+  return $element;
 }
 
 function _form_validation_admission(&$form, FormStateInterface $form_state)
