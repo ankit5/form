@@ -17,6 +17,7 @@ function admission_form_form_node_admission_form_alter(&$form, FormStateInterfac
   if($current_path == '/node/add/admission'){ $form['#title'] = t('APPLICATION ADMISSION FORM');}
    if($current_path == '/admission-form-bfa') $form['#title'] = t('APPLICATION FORM BFA');
   $form['#theme'] = ['node_admission_forms'];
+
    $form['#validate'][] = '_form_validation_admission';
   $form['actions']['submit']['#submit'][] = '_form_submit_admission';
   $form['title']['widget'][0]['value']['#description'] = t('(in block letters as in Senior School Certificate)');
@@ -64,6 +65,51 @@ Allowed types: pdf.');
 function _form_validation_admission(&$form, FormStateInterface $form_state)
 {
   # code...
+  $field_a_course_type = $form_state->getValue('field_a_course_type')[0]['value'];
+   $field_a_category = isset($form_state->getValue('field_a_category')[0]['value'])?$form_state->getValue('field_a_category')[0]['value']:'';
+   $field_mfa_category = isset($form_state->getValue('field_mfa_category')[0]['value'])?$form_state->getValue('field_mfa_category')[0]['value']:'';
+   $field_college_last_attended = isset($form_state->getValue('field_college_last_attended')[0]['value'])?$form_state->getValue('field_college_last_attended')[0]['value']:'';
+   $field_school_last_attended = isset($form_state->getValue('field_school_last_attended')[0]['value'])?$form_state->getValue('field_school_last_attended')[0]['value']:'';
+   $field_category_certificate = empty($form_state->getValue('field_category_certificate')[0]['fids'])?'':'1';
+   $field_annual_income_certificate = empty($form_state->getValue('field_annual_income_certificate')[0]['fids'])?'':'1';
+  // print $field_category_certificate;
+   //print $field_a_course_type." ".$field_a_category." ".$field_mfa_category;
+  // var_dump($form_state->getValue('field_category_certificate')[0]['fids']);
+  if ($field_a_course_type=='MFA-ADFA')  {
+     if($field_mfa_category==''){
+      $form_state->setErrorByName('field_mfa_category', t('MFA Category field is required.'));
+      }  
+      if ($field_college_last_attended=='') {
+     // $form_state->setErrorByName('field_college_last_attended', t('College last attended field is required.'));  
+      }
+      if($field_mfa_category!='GNGND (General Delhi)' && $field_mfa_category!='GNGNO (General Outside-Delhi)' && $field_category_certificate=='') {
+        $form_state->setErrorByName('field_category_certificate', t('Category Certificate field is required.'));
+      }
+       if($field_mfa_category!='GNGND (General Delhi)' && $field_mfa_category!='GNGNO (General Outside-Delhi)' && $field_annual_income_certificate=='') {
+        $form_state->setErrorByName('field_annual_income_certificate', t('Annual Income Certificate field is required.'));
+      }
+
+    }
+    
+  if ($field_a_course_type=='DFA') {
+      if($field_a_category==''){
+      $form_state->setErrorByName('field_a_category', t('DFA Category field is required.')); 
+      } 
+      if ($field_school_last_attended=='') {
+     // $form_state->setErrorByName('field_school_last_attended', t('School last attended field is required.'));  
+      }
+       if($field_a_category!='General' && $field_category_certificate=='') {
+        $form_state->setErrorByName('field_category_certificate', t('Category Certificate field is required.'));
+      }
+      if($field_a_category!='General' && $field_annual_income_certificate=='') {
+        $form_state->setErrorByName('field_annual_income_certificate', t('Annual Income Certificate field is required.'));
+      }
+    }
+   
+     
+   
+   
+
 }
 
 function _form_submit_admission(&$form, FormStateInterface $form_state)
@@ -72,6 +118,24 @@ function _form_submit_admission(&$form, FormStateInterface $form_state)
 $url = Url::fromUserInput('/thank-you', [], ['absolute' => 'true']);
      $response = new RedirectResponse($url->toString());
       $response->send();
+}
+
+function admission_form_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  //check content type
+  if ($node->getType() == 'admission') {
+   
+     $variables['#attached']['library'][] = 'admission_form/global-styling';
+   $variables['#attached']['library'][] = 'admission_form/user_module_external';
+ 
+  }
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function admission_form_theme_registry_alter(&$theme_registry) {
+ // $theme_registry['status_messages']['path'] = drupal_get_path('module', 'admission_form') . '/templates';
 }
 
 /**
@@ -85,6 +149,17 @@ function admission_form_theme($existing, $type, $theme, $path) {
     'thank_you' => [  
       'variables' => ['test_var' =>NULL],
     ],
+    'node__admission__full' => [  
+      'template'  => 'node--admission--full',
+      'base hook' => 'node',
+      'cache' => false,
+    ],
+     'field__node__admission' => [  
+      'template'  => 'field--node--admission',
+      'base hook' => 'field',
+      'cache' => false,
+    ],
+    
   );
 }
 

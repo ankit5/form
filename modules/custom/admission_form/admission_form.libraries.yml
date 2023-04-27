@@ -9,6 +9,7 @@ global-styling:
     - core/jquery
     - core/drupal.ajax
     - core/jquery.once
+    - classy/messages
 
 user_module_external:
   version: 1.x
