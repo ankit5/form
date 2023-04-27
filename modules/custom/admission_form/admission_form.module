@@ -44,7 +44,7 @@ function _validate_file(FileInterface $file) {
  * Implements hook_field_widget_form_alter().
  */
 function admission_form_field_widget_form_alter(&$element, FormStateInterface &$form_state, $context) {
-  if (isset($element['#field_name']) && ($element['#field_name'] == 'field_category_certificate' || $element['#field_name'] == 'field_annual_income_certificate' || $element['#field_name'] == 'field_date_of_birth_certificate'))
+  if (isset($element['#field_name']) && ($element['#field_name'] == 'field_category_certificate' || $element['#field_name'] == 'field_annual_income_certificate' || $element['#field_name'] == 'field_date_of_birth_certificate' || $element['#field_name'] =='field_certificate'))
 
    {
       // Add process callback to change field description.
