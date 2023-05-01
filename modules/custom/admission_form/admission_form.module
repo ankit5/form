@@ -198,7 +198,7 @@ function admission_form_form_node_preview_form_select_alter(&$form, \Drupal\Core
   }
 
   // Add Preview frontend option.
-  $form['frontend'] = [
+  /*$form['frontend'] = [
     '#type' => 'select',
     '#title' => t('Frontend'),
     '#options' => array_keys($frontends),
@@ -214,7 +214,7 @@ function admission_form_form_node_preview_form_select_alter(&$form, \Drupal\Core
 
 
   // Replace submit handler.
-  $form['#submit'] = ['druxt_node_preview_form_node_preview_form_select_submit'];
+  $form['#submit'] = ['druxt_node_preview_form_node_preview_form_select_submit'];*/
 }
 
 function druxt_node_preview_form_node_preview_form_select_submit(array &$form, FormStateInterface $form_state) {
@@ -230,7 +230,7 @@ function druxt_node_preview_form_node_preview_form_select_submit(array &$form, F
     $options['query']['destination'] = $query->get('destination');
     $query->remove('destination');
   }
-  $form_state->setRedirect('entity.node.preview', $route_parameters, $options);
+//  $form_state->setRedirect('entity.node.preview', $route_parameters, $options);
 }
 
 /**
