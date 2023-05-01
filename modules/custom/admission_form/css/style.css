@@ -120,6 +120,14 @@ input[value="Remove"] {
     color: white;
     left: -30px;
 }
+.image-widget:after {
+    content: "x";
+    pointer-events: none;
+    position: relative;
+    top: 23px;
+    color: white;
+    left: -130px;
+}
 .form-item-field-a-photo-0 .description {
 	display:none;
 }
