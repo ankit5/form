@@ -1,7 +1,12 @@
 <meta name="viewport" content="width=1424"> 
 
 <style>
-
+#edit-preview {
+	    position: absolute;
+    right: 48px;
+    width: 150px;
+    top: 16px;
+}
 </style>
 
 
@@ -249,7 +254,9 @@ This form in development Process
 			
 			
 			<div class="row">
-				<div class="col-md-2 offset-md-5">
+				<div style="display: block;
+    margin: 0 auto;
+    position: relative;">
 				<div class="form-group">
 				{{ form.actions }}
 					</div>

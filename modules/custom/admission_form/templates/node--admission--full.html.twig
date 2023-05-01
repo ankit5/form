@@ -1,6 +1,27 @@
 <meta name="viewport" content="width=1424"> 
-
+<style type="text/css" media="print">
+BODY {display:none;visibility:hidden;}
+</style>
 <style>
+
+@media print {
+
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1486px !important;
+}
+}
+.form-item-view-mode {
+	display2:none !important;
+}
+#edit-backlink {
+	background-color: #b90a0a;
+    color: #fff;
+    padding: 6px
+}
+
+
+
+
 
 </style>
 
@@ -8,6 +29,7 @@
 
 
 
+<div class="watermarked" >
 <div class="container">
 	<header class="header" style="background-color: #d1d1d1;position: relative;">
 	<div class="row" style="padding-top: 28px;">
@@ -44,7 +66,7 @@
 	</div>
 		
 	</header>
-	<div class="form-wrap">	
+	<div class="form-wrap" style="background-color: white;">	
 
 	<div class="row">
 				<div class="col-md-4">
@@ -89,12 +111,12 @@
 
 			</div>
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-4">
 					<div class="form-group">
 						{{ content.field_a_date_of_birth }}
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-4">
 					<div class="form-group">
 						{{ content.field_date_of_birth_certificate }}
 					</div>
@@ -159,7 +181,8 @@
 					</div>
 					</div>
 				</div>
-
+			</div>
+            <div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
 						{{ content.field_a_permanent_address }}
@@ -168,7 +191,7 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<div class="form-group">
-						{{ content.field_a_phone_no }}
+						{{ content.field_a_email }}
 					</div>
 					</div>
 				</div>
@@ -181,14 +204,14 @@
 						{{ content.field_a_parent_s_occupation }}
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div class="form-group">
 						<div class="form-group">
 						{{ content.field_a_total_annual_income }}
 					</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-5">
 					<div class="form-group">
 						<div class="form-group">
 						{{ content.field_annual_income_certificate }}
@@ -206,14 +229,14 @@
 						{{ content.field_school_last_attended }}
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					
 						<div class="form-group">
 						{{ content.field_a_date_of_leaving }}
 					
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-5">
 					<div class="form-group">
 						<div class="form-group">
 						{{ content.field_a_university_enrolment_no }}
@@ -242,4 +265,5 @@
 
 		
 	</div>	
+</div>
 </div>
