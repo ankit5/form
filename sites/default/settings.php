@@ -2,7 +2,7 @@
 $config['system.logging']['error_level'] = 'verbose';
 // @codingStandardsIgnoreFile
 $settings['locale_custom_strings_en'][''] = array(
-  'Add Examination' => 'Add Asddnother Examination',
+  'Back to content editing' => 'Close Preview',
 );
 /**
  * @file
