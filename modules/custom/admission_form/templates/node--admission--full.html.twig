@@ -7,10 +7,14 @@ BODY {display:none;visibility:hidden;}
 <style>
 
 @media print {
-
+body {-webkit-print-color-adjust: exact;}
 .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 1486px !important;
 }
+.header {
+	background-color: #d1d1d1 !important;
+	position: relative;
+	}
 .messages--status {
 	display:none !important;
 }
@@ -34,7 +38,11 @@ BODY {display:none;visibility:hidden;}
     width: 60px;
     top: 20px;
 }
-
+.header {
+	background-color: #d1d1d1 !important;
+	position: relative;
+	print-color-adjust: exact; 
+}
 
 </style>
 {% if node.id == true %}
@@ -45,7 +53,7 @@ BODY {display:none;visibility:hidden;}
 
 <div class="watermarked" >
 <div class="container">
-	<header class="header" style="background-color: #d1d1d1;position: relative;">
+	<header class="header" style="">
 	<div class="row" style="padding-top: 28px;">
 				<div class="col-md-5">
 					<div class="txt" style="text-align: end;">
