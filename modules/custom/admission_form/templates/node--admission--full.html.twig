@@ -1,13 +1,21 @@
 <meta name="viewport" content="width=1424"> 
+{% if node.id == false %}
 <style type="text/css" media="print">
 BODY {display:none;visibility:hidden;}
 </style>
+{% endif %}
 <style>
 
 @media print {
 
 .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 1486px !important;
+}
+.messages--status {
+	display:none !important;
+}
+.print {
+	display:none !important;
 }
 }
 .form-item-view-mode {
@@ -20,12 +28,18 @@ BODY {display:none;visibility:hidden;}
 }
 
 
-
+.print {
+	position: absolute;
+    z-index: 100;
+    width: 60px;
+    top: 20px;
+}
 
 
 </style>
-
-
+{% if node.id == true %}
+<a href="javascript:if(window.print)window.print()" class="button print  btn-primary form-control" >Print</a>
+{% endif %}
 
 
 
@@ -74,9 +88,14 @@ BODY {display:none;visibility:hidden;}
 						{{ content.field_a_course_type }}
 					</div>
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-4">
 					<div class="form-group">
 						{{ content.field_a_specialisation }}
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						{{ content.field_payment_recipe }}
 					</div>
 				</div>
 				

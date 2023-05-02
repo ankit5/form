@@ -3,6 +3,10 @@
  $('input[type="file"]').each(function(idx, item) {
    $(item).attr('accept', 'image/*;capture=camera');
 });
+
+ if(performance.navigation.type == 2){
+   location.reload(true);
+}
 //console.log("asd");
  /**
    * Add new custom command.

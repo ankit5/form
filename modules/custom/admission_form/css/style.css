@@ -112,6 +112,11 @@ input[value="Remove"] {
     transition: all 150ms;
     color: #b90a0a;
  }
+ input[name="field_a_photo_0_remove_button"]{
+    position: absolute;
+    right: 15px;
+    top: 51px;
+ }
 .form-managed-file:after{
      content: "x";
     pointer-events: none;
@@ -121,18 +126,22 @@ input[value="Remove"] {
     left: -30px;
 }
 .image-widget:after {
-    content: "x";
+      content: "x";
     pointer-events: none;
-    position: relative;
-    top: 23px;
-    color: white;
-    left: -130px;
+    position: absolute;
+    top: 50px;
+    color: #fdfdfd;
+    left: 330px;
 }
 .form-item-field-a-photo-0 .description {
 	display:none;
 }
+.description {
+    font-size: 12px !important;
+}
 .des {
 	font-size: 11px;
+    margin-top: -11px;
 }
 #edit-field-a-course-type {
 	font-weight: 700;

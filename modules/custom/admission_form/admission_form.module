@@ -27,14 +27,15 @@ function admission_form_form_node_admission_form_alter(&$form, FormStateInterfac
    $form['field_category_certificate']['widget'][0]['#upload_validators']['_validate_file'] = [];
    $form['field_annual_income_certificate']['widget'][0]['#upload_validators']['_validate_file'] = [];
    $form['field_date_of_birth_certificate']['widget'][0]['#upload_validators']['_validate_file'] = [];
+    $form['field_date_of_birth_certificate']['widget'][0]['#upload_validators']['field_payment_recipe'] = [];
    
 }
 
 function _validate_file(FileInterface $file) {
   $errors = [];
   $size = $file->getSize();
-  if($size < 1000000){
- $errors[] = t($size."Minimum file size 1 MB is required.");
+  if($size < 100000){
+ $errors[] = t($size."Minimum file size 100 KB is required.");
 }
  
   return $errors;
@@ -44,7 +45,7 @@ function _validate_file(FileInterface $file) {
  * Implements hook_field_widget_form_alter().
  */
 function admission_form_field_widget_form_alter(&$element, FormStateInterface &$form_state, $context) {
-  if (isset($element['#field_name']) && ($element['#field_name'] == 'field_category_certificate' || $element['#field_name'] == 'field_annual_income_certificate' || $element['#field_name'] == 'field_date_of_birth_certificate' || $element['#field_name'] =='field_certificate'))
+  if (isset($element['#field_name']) && ($element['#field_name'] == 'field_category_certificate' || $element['#field_name'] == 'field_annual_income_certificate' || $element['#field_name'] == 'field_date_of_birth_certificate' || $element['#field_name'] =='field_certificate' || $element['#field_name'] =='field_payment_recipe'))
 
    {
       // Add process callback to change field description.
@@ -57,7 +58,7 @@ function admission_form_field_widget_form_alter(&$element, FormStateInterface &$
  *  The description field is build in a #process callback so we need to add another callback.
  */
 function _change_description($element, FormStateInterface $form_state, $form) {
-  $element['#description'] = t('File size 1 MB to 5 MB limit.<br>
+  $element['#description'] = t('File size 100 KB to 5 MB limit.<br>
 Allowed types: pdf.');
   return $element;
 }
@@ -115,9 +116,9 @@ function _form_validation_admission(&$form, FormStateInterface $form_state)
 function _form_submit_admission(&$form, FormStateInterface $form_state)
 {
   \Drupal::service('messenger')->addMessage("Application Submit Succesfully");
-$url = Url::fromUserInput('/thank-you', [], ['absolute' => 'true']);
+/*$url = Url::fromUserInput('/thank-you', [], ['absolute' => 'true']);
      $response = new RedirectResponse($url->toString());
-      $response->send();
+      $response->send();*/
 }
 
 function admission_form_preprocess_node(&$variables) {

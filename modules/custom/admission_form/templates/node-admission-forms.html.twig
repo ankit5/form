@@ -84,24 +84,35 @@ This form in development Process
 			
 		
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-4">
 					<div class="form-group">
 						{{ form.title }}
 					</div>
 				</div>
-				<div class="col-md-6">
-    {{ form.field_a_photo }}
-						<div class="des">Applicant’s passport size photograph to be affixed with selfattested</div>
+				<div class="col-md-4">
+				<div class="form-item">
+       <label><a href="https://smartpay.ucoonline.in/COLZARTSDELHI/COLZARTSDELHI.aspx" target="_blank" class="button  btn-primary form-control" >Click here for payment</a></label>
+						<div class="" style="    font-weight: 600;
+    font-size: 14px;">Fee for MFA/ADFA 500 Rs and Fee for DFA 250 Rs.</div>
+				</div>
+				</div>
+				<div class="col-md-4">
+    {{ form.field_payment_recipe }}
+						<div class="des"></div>
 				</div>
 			</div>
 			<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-4">
+    {{ form.field_a_photo }}
+						<div class="des">Applicant’s passport size photograph to be affixed with selfattested</div>
+				</div>
+			<div class="col-md-4">
 					<div class="form-group">
 						{{ form.field_a_category }}
 						{{ form.field_mfa_category }}
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-4">
 					<div class="form-group">
 						{{ form.field_category_certificate }}
 					</div>
